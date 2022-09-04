@@ -5,6 +5,7 @@ const newsCategories = async () => {
     newsCategoriesQantainer(data.data.news_category)
         .catch((error) => console.log(error));
 };
+
 const newsCategoriesQantainer = (types) => {
     console.log(types);
     const categoriesContainer = document.getElementById("newsCatagory");
@@ -21,6 +22,7 @@ const newsCategoriesQantainer = (types) => {
     });
 
 };
+
 const loadNews = (newsId) => {
     const url = `https://openapi.programming-hero.com/api/news/category/0${newsId}`;
     fetch(url)
@@ -29,6 +31,7 @@ const loadNews = (newsId) => {
     spinner(true);
 
 };
+
 const newsPortal = (newsPor) => {
     const newsContainer = document.getElementById("displayNews");
     newsContainer.innerText = ``;
@@ -88,6 +91,7 @@ const newsPortal = (newsPor) => {
     console.log(numberOfItems);
     displayNumberOfItems(numberOfItems);
 };
+
 const spinner = (isLoading) => {
     const loaderSection = document.getElementById('Buffering');
     if (isLoading) {
@@ -97,6 +101,7 @@ const spinner = (isLoading) => {
         loaderSection.classList.add('d-none');
     }
 }
+
 const loadNewsDetails = async news_id => {
     const url = `https://openapi.programming-hero.com/api/news/${news_id}`;
     try {
@@ -108,6 +113,7 @@ const loadNewsDetails = async news_id => {
         console.log(error);
     }
 }
+
 const displayNewsDetails = newsId => {
     spinner(true);
     console.log(newsId._id);
@@ -137,3 +143,22 @@ const displayNewsDetails = newsId => {
     `;
     spinner(false);
 }
+
+const displayNumberOfItems = (itemsFound) => {
+    const itemsFoundContainer = document.getElementById('newsCount');
+    itemsFoundContainer.textContent = '';
+    const itemsCount = document.createElement('h4');
+    itemsCount.classList.add('fw-bold');
+    itemsCount.classList.add('ps-4');
+    itemsCount.classList.add('py-3');
+    itemsCount.classList.add('text-danger');
+    itemsCount.classList.add('text-center');
+    itemsCount.innerHTML = `Total News found -
+        ${itemsFound} 
+    `;
+    itemsFoundContainer.appendChild(itemsCount);
+}
+
+
+loadNews('4');
+newsCategories();
