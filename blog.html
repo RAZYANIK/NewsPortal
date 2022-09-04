@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body class="m-5">
+    <h1 class="text-center p-2  text-dark">Welcome to Daily JS Blogs</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4 m-2">
+        <div class="col">
+            <div class="card">
+                <img src="images/JS-interview (1).png" class="card-img-top image-fluid" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Var, Let, and Const – What's the Difference?</h5>
+                    <p class="card-text">The differences between var, let, and const variable declaration in JavaScript
+                        include:
+                        Variables declared with var and const are scoped to the immediate function body.
+                        Variables declared with the var keyword are hoisted. Hoisting means that the variable can be
+                        accessed in their enclosing scope even before they are declared.
+                        Variables declared with the let keyword are block-scoped, which means the variables will have
+                        scope to the immediate enclosing <br>
+                        1. Var has the function or global scope. let have the block scope. const variable has the block
+                        scope.<br>
+                        2. Var can be updated or re-declared. let can only be updated and can't be re-declared. const
+                        can't
+                        be updated or re-declared. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="images/JS-interview (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">.forEach(), .map(), .filter(), .find() What's the difference?</h5>
+                    <p class="card-text">
+                        Array functions are something that can help you with any type of manipulation or looping through
+                        an array of items in JavaScript. Some of the pre-built functions can have very similar use cases
+                        to one another, therefore I have created a list of manipulation functions, with how they look
+                        and their use cases. <br><br>
+                        <strong>.forEach:</strong>
+
+                        .forEach(), is used to execute the same code on every element in an array but does not change
+                        the array and it returns undefined. <br>
+                        <strong>.map():</strong>
+
+                        .map() executes the same code on every element in an array and returns a new array with the
+                        updated elements. <br>
+                        <strong>.filter():</strong>
+
+                        .filter() checks every element in an array to see if it meets a certain criteria and returns a
+                        new array with the elements that return 'truthy' for the criteria.<br>
+                        <strong>.find():</strong>
+                        The find() method returns the first element in the provided array that satisfies the provided
+                        testing function. If no values satisfy the testing function, undefined is returned.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="images/1_G6zvXMZc4UZ73rdpc4r5nQ.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Difference between regular functions and arrow functions</h5>
+                    <p class="card-text">Arrow function — also called fat arrow function— is a new feature introduced in
+                        ES6 that is a more concise syntax for writing function expressions. While both regular
+                        JavaScript functions and arrow functions work in a similar manner, there are certain differences
+                        between them. <br>
+                        JavaScript's arrow functions might seem the same as regular functions on the surface, but they
+                        have some very important differences:<br>
+
+                        1. Syntactical differences<br>
+                        2. this value (execution context)<br>
+                        3. Usage as methods<br>
+                        4. Usage as constructors<br>
+                        5. arguments binding
+                        <br>
+                        'this' value inside a regular function is dynamic and depends on how the function is invoked.
+                        But
+                        'this' inside the arrow function is bound lexically and equals to this of the outer function.
+                        Fat
+                        arrow methods always bind 'this' a value to the class instance.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="images/JS-interview (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Why We should use Template literals (Template strings)?</h5>
+                    <p class="card-text">
+                        Template literals provide an easy way to interpolate variables and expressions into strings.
+
+                        The method is called string interpolation.
+                        Template literals are literals delimited with backtick (`) characters, allowing for multi-line
+                        strings, for string interpolation with embedded expressions, and for special constructs called
+                        tagged templates.
+
+                        Template literals are sometimes informally called template strings, because they are used most
+                        commonly for string interpolation (to create strings by doing substitution of placeholders).
+                        However, a tagged template literal may not result in a string; it can be used with a custom tag
+                        function to perform whatever operations you want on the different parts of the template literal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
