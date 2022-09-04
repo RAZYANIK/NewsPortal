@@ -21,3 +21,11 @@ const newsCategoriesQantainer = (types) => {
     });
 
 };
+const loadNews = (newsId) => {
+    const url = `https://openapi.programming-hero.com/api/news/category/0${newsId}`;
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => newsPortal(data.data));
+    spinner(true);
+
+};
