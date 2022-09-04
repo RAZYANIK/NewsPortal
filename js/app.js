@@ -97,3 +97,14 @@ const spinner = (isLoading) => {
         loaderSection.classList.add('d-none');
     }
 }
+const loadNewsDetails = async news_id => {
+    const url = `https://openapi.programming-hero.com/api/news/${news_id}`;
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        displayNewsDetails(data.data[0]);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
