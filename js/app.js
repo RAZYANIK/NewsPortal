@@ -88,3 +88,12 @@ const newsPortal = (newsPor) => {
     console.log(numberOfItems);
     displayNumberOfItems(numberOfItems);
 };
+const spinner = (isLoading) => {
+    const loaderSection = document.getElementById('Buffering');
+    if (isLoading) {
+        loaderSection.classList.remove('d-none');
+    }
+    else {
+        loaderSection.classList.add('d-none');
+    }
+}
