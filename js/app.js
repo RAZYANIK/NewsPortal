@@ -159,6 +159,5 @@ const displayNumberOfItems = (itemsFound) => {
     itemsFoundContainer.appendChild(itemsCount);
 }
 
-
 loadNews('3');
 newsCategories();
