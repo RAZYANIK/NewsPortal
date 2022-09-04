@@ -160,5 +160,5 @@ const displayNumberOfItems = (itemsFound) => {
 }
 
 
-loadNews('4');
+loadNews('3');
 newsCategories();
