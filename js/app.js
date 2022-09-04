@@ -108,3 +108,32 @@ const loadNewsDetails = async news_id => {
         console.log(error);
     }
 }
+const displayNewsDetails = newsId => {
+    spinner(true);
+    console.log(newsId._id);
+    const modalTitle = document.getElementById('newsModal');
+    modalTitle.innerText = newsId.title;
+    const newsDetails = document.getElementById('newsDescription');
+    newsDetails.innerHTML = `
+    <img src="${newsId.image_url}" class="img-fluid w-100 mb-5 rounded-3" alt="">
+    <p class="card-text text-black-50 fw-semibold pb-5 text-justify">
+        ${newsId.details}
+    </p>
+    <div class="d-flex align-items-center justify-content-between me-4">
+        <div class="d-flex justify-content-center gap-3">
+            <img src="${newsId.author.img ? newsId.author.img : 'No Image Found'}" alt="" class="img-fluid rounded rounded-circle" style="width: 50px; height: 50px;">
+            <div>
+                <h6 class="fw-semibold">${newsId.author.name ? newsId.author.name : 'No Information Found'}</h6>
+                <p class="fw-semibold text-black-50">${newsId.author.published_data ? newsId.author.published_date.split(' ').shift() : 'No Date Found'}</p>
+            </div>
+        </div>
+        <div class="d-flex fw-semibold gap-2">
+            <p>
+                <i class="bi bi-eye"></i>
+            </p>
+            <p><span>${newsId.total_view ? newsId.total_view : 'No Info'}</span> views</p>
+        </div>
+    </div>
+    `;
+    spinner(false);
+}
